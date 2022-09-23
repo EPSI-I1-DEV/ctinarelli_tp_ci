@@ -24,6 +24,7 @@ sonar:
  script:
  - mvn verify sonar:sonar -Dsonar.projectKey=jeej_project
 
+
 services:
  - postgres:12.2-alpine
 
