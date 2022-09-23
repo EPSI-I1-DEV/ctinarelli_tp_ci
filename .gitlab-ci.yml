@@ -6,5 +6,3 @@ unit_test:
 	- mvn clean test
 	rules:
 	- if: '$CI_COMMIT_BRANCH == "main"'
-	export DATABASE_URL_TEST=postgres://gael:@postgres:5432/qieam
-	POSTGRES_HOST_AUTH_METHOD: trust
