@@ -22,4 +22,4 @@ sonar:
  stage: analyse
  image: maven:3.6.3-jdk-11
  script:
- - mvn verify sonar:sonar -Dsonar.qualitygate.wait=true -Dsonar.projectKey=jeej_project
+ - mvn verify sonar:sonar -Dsonar.projectKey=jeej_project
