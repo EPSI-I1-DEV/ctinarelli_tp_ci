@@ -10,8 +10,15 @@ unit_test:
  stage: test
  script:
  - mvn clean test
+ - mvn verify
  rules:
  - if: '$CI_COMMIT_BRANCH == "main"'
+ artifacts:
+  when: always
+  reports:
+   junit:
+   - target/surefire-reports/TEST-*.xml
+   - target/failsafe-reports/TEST-*.xml
 
 build:
  stage: build
