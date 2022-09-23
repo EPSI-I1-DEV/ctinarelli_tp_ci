@@ -20,5 +20,5 @@ build:
 
 sonar:
  stage: analyse
-	script:
-	- mvn verify sonar:sonar -Dsonar.qualitygate.wait=true
+ script:
+ - mvn verify sonar:sonar -Dsonar.qualitygate.wait=true
