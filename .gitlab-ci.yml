@@ -23,3 +23,13 @@ sonar:
  image: maven:3.6.3-jdk-11
  script:
  - mvn verify sonar:sonar -Dsonar.projectKey=jeej_project
+
+services:
+ - postgres:12.2-alpine
+
+variables:
+ POSTGRES_DB: topkek
+ POSTGRES_USER: 'jeej'
+ POSTGRES_PORT: 5432
+ POSTGRES_HOST_AUTH_METHOD: trust
+ DATABASE_URL_TEST=postgres://jeej:@postgres:5432/topkek
